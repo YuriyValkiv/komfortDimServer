@@ -34,7 +34,6 @@ public class JwtAuthenticationController {
     this.jwtInMemoryUserDetailsService = jwtInMemoryUserDetailsService;
   }
 
-  @CrossOrigin(value = "https://komfortdim.if.ua")
   @PostMapping(value = "/authenticate")
   public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
           throws Exception {
