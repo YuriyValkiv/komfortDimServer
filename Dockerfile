@@ -7,9 +7,9 @@ FROM openjdk:11
 VOLUME /tmp
 
 # Copy the JAR file from the target directory on the host into the container
-COPY target/komfort.jar komfort-0.0.1.jar app.jar
+COPY target/komfort.jar komfort-0.0.1.jar
 
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "/komfort-0.0.1.jar"]
 
 # Expose the port your application listens on
 EXPOSE 8080
