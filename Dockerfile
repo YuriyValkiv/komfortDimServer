@@ -4,6 +4,8 @@ FROM openjdk:11
 # Set the working directory inside the container
 #WORKDIR /app
 
+VOLUME /tmp
+
 # Copy the JAR file from the target directory on the host into the container
 COPY target/komfort.jar komfort-0.0.1.jar app.jar
 
