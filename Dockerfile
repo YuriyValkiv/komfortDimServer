@@ -1,3 +1,7 @@
+FROM maven:3.9.4-eclipse-temurin-11-alpine
+COPY . .
+RUN mvn clean package -DskipTests
+
 # Use an OpenJDK base image
 FROM openjdk:11
 
@@ -7,7 +11,7 @@ FROM openjdk:11
 #VOLUME /tmp
 
 # Copy the JAR file from the target directory on the host into the container
-COPY /target/komfort-0.0.1.jar komfort.jar
+COPY --from=build /target/komfort-0.0.1.jar komfort.jar
 
 ENTRYPOINT ["java", "-jar", "/komfort.jar"]
 
