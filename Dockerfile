@@ -1,4 +1,4 @@
-FROM maven:3.9.4-eclipse-temurin-11-alpine
+FROM maven:3.9.4-eclipse-temurin-11-alpine AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
