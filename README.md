@@ -1,2 +1,2 @@
 # komfortDimServer
-server for KomfortDim site
+server for Komfort Dim site
